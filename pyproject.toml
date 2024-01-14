@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ipytrace"
+dependencies = [
+  "ipykernel>=6.0.0"
+]
+requires-python = ">= 3.6"  #  TODO
+
+authors = [
+  {name = "Wu Wenxu", email = "wu.wenxu@outlook.com"},
+]
+
+description = "ipytrace is a utils package powered by ipython used to enhance debugging in vscode and other environments"
+readme = "README.md"
+license = {file = "LICENSE"}
+dynamic = ["version"]
+
+keywords = ["debug", "ipython", "jupyter", "vscode"]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+
+  "Intended Audience :: Developers",
+
+  # Pick your license as you wish (see also "license" above)
+  "License :: OSI Approved :: MIT License",
+
+  # Specify the Python versions you support here.
+  "Programming Language :: Python :: 3",
+]
+
+
+[tool.mypy]
+
+[tool.setuptools.dynamic]
+version = {attr = "ipytrace.__version__"}
